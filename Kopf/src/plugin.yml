@@ -1,0 +1,31 @@
+name: MagicKopf
+version: 1.0
+author: Casper
+main: me.Casper.Kopf.Main
+description: Minecraft kopf plugin
+api-version: 1.17
+commands:
+    kopf:
+      description: Kopf command
+      usage: /kopf <Name>
+permissions:
+   Kopf.Time.Bypass:
+    description: Umgehen Sie die Wartezeit
+    default: op
+   Kopf.use:
+    description: Verwenden Sie /kopf
+    default: op
+   Kopf.Tier2:
+    description: Tier 2
+    default: op
+   Kopf.Admin:
+    description: Verwenden Sie /kopf reload
+    default: op
+   Kopf.*:
+    description: All chat channels
+    default: op
+    children:
+      Kopf.Time.Bypass: true
+      Kopf.use: true
+      Kopf.Tier2: true
+      Kopf.Admin: true
